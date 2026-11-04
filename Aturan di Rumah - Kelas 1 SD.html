@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aturan di Rumah - Pendidikan Pancasila Kelas 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e8f9e4;--card:#fff;--tx:#1d3b24;--g1:#3fb950;--g2:#2a9d3f;--g3:#c9f0c3;--yl:#ffd84d;--bad:#e8590c;--badbg:#fff0e5;--okbg:#e3fbe0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#12301a;--card:#1c4527;--tx:#eaffea;--g1:#4ccf61;--g2:#37b24d;--g3:#2b5e36;--badbg:#4a2e1a;--okbg:#235a2e}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#12301a;--card:#1c4527;--tx:#eaffea;--g1:#4ccf61;--g2:#37b24d;--g3:#2b5e36;--badbg:#4a2e1a;--okbg:#235a2e}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Baloo 2","Comic Sans MS",system-ui,sans-serif;font-size:20px;min-height:100vh;overflow-x:hidden}
+#bar{height:14px;background:var(--g3);margin:10px 14px;border-radius:9px;overflow:hidden}
+#fill{height:100%;width:0;background:var(--g1);transition:width .5s;border-radius:9px}
+main{max-width:820px;margin:0 auto;padding:6px 14px 90px}
+.slide{display:none;background:var(--card);border-radius:28px;padding:22px;box-shadow:0 6px 0 var(--g2);animation:pop .5s}
+.slide.on{display:block}
+@keyframes pop{from{transform:scale(.9) translateY(20px);opacity:0}to{transform:none;opacity:1}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+h1{font-size:2em;margin:.2em 0;color:var(--g2);line-height:1.1}
+h2{font-size:1.5em;margin:.2em 0 .5em;color:var(--g2)}
+.c{text-align:center}
+.big{font-size:5.5rem;display:inline-block;animation:bob 2s infinite}
+.row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+button{font:inherit;cursor:pointer;border:0;border-radius:20px;padding:12px 22px;background:var(--g1);color:#fff;font-weight:800;box-shadow:0 5px 0 var(--g2);transition:transform .15s}
+button:hover{transform:scale(1.05)}button:active{transform:translateY(4px);box-shadow:none}
+.nav{position:fixed;left:0;right:0;bottom:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;background:var(--bg);gap:10px}
+.nav button{background:var(--yl);color:#3a2d00;box-shadow:0 5px 0 #d9a900}
+.tile{background:var(--g3);border-radius:22px;padding:14px;display:flex;align-items:center;gap:14px;margin:10px 0;cursor:pointer;animation:pop .5s backwards}
+.tile .e{font-size:3rem}
+.tile:hover{transform:scale(1.02)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.card{background:var(--g3);border-radius:22px;padding:14px;text-align:center;border:4px solid transparent}
+.card .e{font-size:3.2rem}
+.card.ok{border-color:var(--g1);background:var(--okbg)}.card.no{border-color:var(--bad);background:var(--badbg);animation:shake .4s}
+.card button{margin:4px;padding:8px 14px;font-size:.85em}
+.card .bn{background:var(--bad);box-shadow:0 5px 0 #b34400}
+.opt{display:block;width:100%;text-align:left;margin:10px 0;background:var(--g3);color:var(--tx);box-shadow:0 5px 0 var(--g2)}
+.opt.ok{background:var(--g1);color:#fff}.opt.no{background:var(--bad);color:#fff;animation:shake .4s}
+#fb{margin-top:12px;padding:14px;border-radius:18px;display:none;font-weight:700;animation:pop .4s}
+#fb.ok{display:block;background:var(--okbg)}#fb.no{display:block;background:var(--badbg)}
+.stars{font-size:3rem}
+.chip{background:var(--g3);color:var(--tx);box-shadow:0 4px 0 var(--g2);padding:10px 16px;border-radius:30px;font-size:.85em}
+.chip.sel{background:var(--g1);color:#fff}
+.conf{position:fixed;top:-30px;font-size:2rem;animation:fall 2.5s linear forwards;pointer-events:none;z-index:9}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+.meta{font-size:.8em;opacity:.8}
+</style>
+</head>
+<body>
+<div id="bar"><div id="fill"></div></div>
+<main>
+
+<section class="slide on c">
+<div class="big">🏠</div>
+<h1>Aturan di Rumah</h1>
+<div class="row" style="font-size:2.4rem">🧒 👧 🌳 🌟 🦋</div>
+<p><b>Pendidikan Pancasila</b><br>Kelas 1 SD</p>
+<p class="meta">Ayo belajar sambil bermain! Tekan tombol <b>Lanjut</b> di bawah.</p>
+</section>
+
+<section class="slide">
+<h2>🎯 Tujuan Belajar Kita</h2>
+<div class="tile"><span class="e">👀</span>Aku bisa mengenal aturan di rumah.</div>
+<div class="tile"><span class="e">🗣️</span>Aku bisa menyebutkan aturan di rumah.</div>
+<div class="tile"><span class="e">💚</span>Aku mau menaati aturan bersama keluarga.</div>
+</section>
+
+<section class="slide">
+<h2>📖 Apa itu Aturan di Rumah?</h2>
+<p>Aturan adalah hal yang harus kita lakukan bersama di rumah. Aturan membuat rumah <b>aman, bersih, dan nyaman</b>. 🥰</p>
+<p class="meta">Tekan gambar untuk mendengar contohnya!</p>
+<div id="materi"></div>
+<p class="c" id="mt" style="background:var(--g3);border-radius:18px;padding:12px;min-height:3em">Tekan salah satu gambar ya 👆</p>
+</section>
+
+<section class="slide">
+<h2>🎮 Ayo Bermain: Aturan atau Bukan?</h2>
+<p>Lihat gambar. Pilih <b>✅ Aturan</b> atau <b>❌ Bukan</b>.</p>
+<div class="cards" id="game"></div>
+<p class="c" id="gs" style="font-size:1.2em"></p>
+</section>
+
+<section class="slide" id="quiz">
+<div class="meta" id="qn"></div>
+<h2 id="qt"></h2>
+<div id="qo"></div>
+<div id="fb"></div>
+<div class="c" style="margin-top:12px"><button id="qnext" style="display:none">Soal Berikutnya ➡️</button></div>
+</section>
+
+<section class="slide c">
+<div class="big">🏆</div>
+<h1>Hebat! Kamu Selesai!</h1>
+<div class="stars" id="stars"></div>
+<p style="font-size:1.4em">Nilaimu: <b id="score"></b> dari 20</p>
+<p id="msg"></p>
+<h2>💭 Refleksi</h2>
+<p>Aturan apa yang akan kamu lakukan di rumah? Pilih sebanyak yang kamu mau.</p>
+<div class="row" id="chips"></div>
+<p id="rf" style="font-weight:700"></p>
+<p>Bagaimana perasaanmu belajar hari ini?</p>
+<div class="row" id="feel" style="font-size:3rem"></div>
+<p id="fl"></p>
+<button onclick="restart()">🔄 Main Lagi</button>
+</section>
+
+</main>
+<div class="nav"><button id="prev">⬅️ Kembali</button><button id="next">Lanjut ➡️</button></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const slides=[...document.querySelectorAll('.slide')];
+let cur=0;
+function show(i){cur=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,k)=>s.classList.toggle('on',k===cur));$('fill').style.width=(cur/(slides.length-1)*100)+'%';$('prev').style.visibility=cur?'visible':'hidden';$('next').style.visibility=(cur===4||cur===slides.length-1)?'hidden':'visible';window.scrollTo(0,0)}
+$('prev').onclick=()=>show(cur-1);$('next').onclick=()=>show(cur+1);
+function confetti(){for(let i=0;i<22;i++){const d=document.createElement('div');d.className='conf';d.textContent=['⭐','🎉','💚','🌟'][i%4];d.style.left=Math.random()*100+'vw';d.style.animationDelay=Math.random()*.6+'s';document.body.appendChild(d);setTimeout(()=>d.remove(),3500)}}
+
+const materi=[['🛏️','Merapikan tempat tidur setelah bangun.'],['🙏','Berdoa sebelum makan.'],['🧼','Mencuci tangan sebelum makan.'],['🗑️','Membuang sampah di tempatnya.'],['🚪','Pamit kepada ayah atau ibu sebelum pergi.'],['🧸','Mengembalikan mainan ke tempatnya.']];
+$('materi').innerHTML=materi.map((m,i)=>`<div class="tile" style="animation-delay:${i*.08}s" data-t="${m[1]}"><span class="e">${m[0]}</span>${m[1]}</div>`).join('');
+document.querySelectorAll('#materi .tile').forEach(t=>t.onclick=()=>{$('mt').textContent='✨ '+t.dataset.t+' Ini aturan di rumah!';t.style.background='var(--okbg)'});
+
+const gm=[['🛏️','Merapikan tempat tidur',1],['🗑️','Membuang sampah sembarangan',0],['🙏','Berdoa sebelum makan',1],['😠','Berteriak kepada ibu',0],['🚪','Pamit sebelum pergi',1],['🧸','Meninggalkan mainan berantakan',0]];
+let gd=0;
+$('game').innerHTML=gm.map((g,i)=>`<div class="card" id="g${i}"><div class="e">${g[0]}</div><div>${g[1]}</div><button onclick="ans(${i},1)">✅ Aturan</button><button class="bn" onclick="ans(${i},0)">❌ Bukan</button></div>`).join('');
+function ans(i,v){const c=$('g'+i);if(c.classList.contains('ok'))return;if(gm[i][2]===v){c.classList.remove('no');c.classList.add('ok');c.querySelector('div:nth-child(2)').textContent+=v?' ⭐ Benar!':' ⭐ Betul, ini bukan aturan!';gd++;if(gd===6){$('gs').textContent='🎉 Hebat! Semua benar! Lanjut ke kuis ya!';confetti()}}else{c.classList.remove('no');void c.offsetWidth;c.classList.add('no')}}
+
+const Q=[
+['Sebelum makan, kita harus ...',['Berdoa','Berlari','Tidur'],0,'Sebelum makan kita berdoa agar bersyukur kepada Tuhan.'],
+['Setelah bangun tidur, kita ...',['Membiarkan kasur berantakan','Merapikan tempat tidur','Pergi tanpa pamit'],1,'Tempat tidur harus dirapikan supaya kamar bersih dan nyaman.'],
+['Sebelum makan, kita mencuci ...',['Piring mainan','Kaki saja','Tangan'],2,'Tangan dicuci agar kuman hilang dan kita tidak sakit.'],
+['Sampah harus dibuang ke ...',['Tempat sampah','Bawah kursi','Halaman tetangga'],0,'Sampah dibuang ke tempat sampah supaya rumah bersih.'],
+['Sebelum pergi bermain, kita harus ...',['Diam-diam pergi','Pamit kepada ibu atau ayah','Menutup pintu keras'],1,'Kita pamit agar orang tua tahu kita ada di mana.'],
+['Setelah bermain, mainan ...',['Ditinggal di lantai','Dilempar','Dikembalikan ke tempatnya'],2,'Mainan dikembalikan supaya rumah rapi dan tidak ada yang tersandung.'],
+['Saat bertemu ayah dan ibu di pagi hari, kita ...',['Mengucapkan selamat pagi','Diam saja','Berteriak'],0,'Menyapa dengan sopan menunjukkan kita menghormati keluarga.'],
+['Jika dibantu ibu, kita berkata ...',['Cepat!','Terima kasih','Tidak mau'],1,'Terima kasih adalah kata yang baik untuk menghargai bantuan.'],
+['Kita tidur pada waktu ...',['Larut malam terus','Sesuai jam tidur','Kapan saja'],1,'Tidur tepat waktu membuat tubuh sehat dan segar.'],
+['Sebelum tidur, kita menyikat ...',['Sepatu','Gigi','Meja'],1,'Menyikat gigi menjaga gigi tetap sehat.'],
+['Kita berbicara kepada orang tua dengan ...',['Kata-kata sopan','Suara kasar','Mengejek'],0,'Berbicara sopan adalah cara menghormati orang tua.'],
+['Sepatu yang sudah dipakai disimpan di ...',['Atas tempat tidur','Meja makan','Rak sepatu'],2,'Rak sepatu membuat rumah tetap rapi dan bersih.'],
+['Jika lampu tidak dipakai, kita ...',['Mematikan lampu','Membiarkannya menyala','Memecahkannya'],0,'Mematikan lampu menghemat listrik.'],
+['Colokan listrik tidak boleh ...',['Dilihat','Dimainkan','Dijauhi'],1,'Colokan listrik berbahaya. Jangan dimainkan agar kita aman.'],
+['Saat makan, kita ...',['Berlari-lari','Duduk dengan tenang','Naik meja'],1,'Makan sambil duduk agar tidak tersedak dan tidak berantakan.'],
+['Jika adik ingin mainan yang sama, kita ...',['Berebut','Memukul','Bergantian'],2,'Bergantian membuat kita rukun dan tidak bertengkar.'],
+['Ibu sedang menyapu. Kita bisa ...',['Membantu','Mengotori lagi','Pergi main'],0,'Membantu orang tua adalah perbuatan baik di rumah.'],
+['Aturan di rumah dibuat supaya ...',['Kita sedih','Rumah aman dan nyaman','Kita dimarahi'],1,'Aturan dibuat agar semua anggota keluarga hidup aman, rukun, dan nyaman.'],
+['Siapa yang harus menaati aturan di rumah?',['Hanya adik','Hanya ayah','Semua anggota keluarga'],2,'Semua anggota keluarga bersama-sama menaati aturan.'],
+['Jika kita melanggar aturan, kita sebaiknya ...',['Meminta maaf dan memperbaiki','Marah','Bersembunyi'],0,'Meminta maaf adalah sikap berani dan baik.']
+];
+const praise=['Hebat! Kamu pintar sekali! 🌟','Mantap! Jawabanmu benar! 🎉','Keren! Pertahankan ya! 👏','Bagus sekali! Kamu anak rajin! 💚'];
+let qi=0,sc=0;
+function loadQ(){const q=Q[qi];$('qn').textContent='Soal '+(qi+1)+' dari 20';$('qt').textContent=q[0];$('fb').className='';$('fb').style.display='none';$('qnext').style.display='none';
+$('qo').innerHTML=q[1].map((o,i)=>`<button class="opt" data-i="${i}">${'ABC'[i]}. ${o}</button>`).join('');
+document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>pick(+b.dataset.i))}
+function pick(i){const q=Q[qi],bs=document.querySelectorAll('.opt');if(bs[0].disabled)return;bs.forEach(b=>b.disabled=true);const f=$('fb');
+if(i===q[2]){sc++;bs[i].classList.add('ok');f.className='ok';f.style.display='block';f.textContent=praise[qi%4];confetti()}
+else{bs[i].classList.add('no');bs[q[2]].classList.add('ok');f.className='no';f.style.display='block';f.textContent='Belum tepat, tidak apa-apa. 🤗 Jawaban benar: '+q[1][q[2]]+'. '+q[3]}
+$('qnext').style.display='inline-block';$('qnext').textContent=qi===19?'Lihat Hasil 🏆':'Soal Berikutnya ➡️'}
+$('qnext').onclick=()=>{if(qi===19){finish()}else{qi++;loadQ();window.scrollTo(0,0)}};
+function finish(){$('score').textContent=sc;const s=sc>=17?3:sc>=12?2:1;$('stars').textContent='⭐'.repeat(s)+'☆'.repeat(3-s);$('msg').textContent=sc>=17?'Luar biasa! Kamu paham aturan di rumah! 🎉':sc>=12?'Bagus! Sedikit lagi kamu jadi ahli aturan! 💪':'Ayo belajar lagi, kamu pasti bisa! 💚';show(5);confetti()}
+
+const ch=['🛏️ Merapikan tempat tidur','🙏 Berdoa sebelum makan','🧼 Cuci tangan','🗑️ Buang sampah di tempatnya','🚪 Pamit sebelum pergi','🧸 Merapikan mainan'];
+const sel=new Set();
+$('chips').innerHTML=ch.map((c,i)=>`<button class="chip" data-i="${i}">${c}</button>`).join('');
+document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;sel.has(i)?sel.delete(i):sel.add(i);b.classList.toggle('sel');$('rf').textContent=sel.size?'Kamu akan melakukan '+sel.size+' aturan di rumah. Semangat! 💪':''});
+const fe=[['😄','Senang sekali!'],['🙂','Senang.'],['😐','Biasa saja.']];
+$('feel').innerHTML=fe.map((f,i)=>`<span style="cursor:pointer" data-i="${i}">${f[0]}</span>`).join('');
+document.querySelectorAll('#feel span').forEach(s=>s.onclick=()=>{$('fl').textContent=fe[s.dataset.i][1]+' Terima kasih sudah belajar! 💚'});
+function restart(){qi=0;sc=0;gd=0;sel.clear();document.querySelectorAll('.chip').forEach(b=>b.classList.remove('sel'));$('rf').textContent='';$('fl').textContent='';$('gs').textContent='';document.querySelectorAll('.card').forEach(c=>c.classList.remove('ok','no'));loadQ();show(0)}
+loadQ();show(0);
+</script>
+</body>
+</html>
